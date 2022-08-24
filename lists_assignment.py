@@ -7,10 +7,12 @@ print(my_list)
 
 #qn2. count no of strings where string length is 2 or more and 1st and last character are same from a given list of strings
 my_other_list = ['abc','xyz','aba','1221']
+count = 0
 for t in my_other_list:
     if len(t) >= 2:  
-        if t[0] == t[-1]:
-            print(t)
+        if t[0] == t[-1]:           
+                count += 1
+                print ("String " +str(t)+ " is of " +str(count)+ " characters" )
 
 #Qn3 program to remove duplicates from a list
 fruits = ["Apple", "Banana", "Melon", "Banana", "Cherry", "Banana"]
