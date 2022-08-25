@@ -4,6 +4,12 @@ user_input = int(input("Enter the size of the list \n"))
 my_list = [ x for x in range(user_input)]
 print(my_list) 
 
+x = 0
+for i in range(user_input):
+   x = x + my_list[i] 
+print(x)
+
+
 
 #qn2. count no of strings where string length is 2 or more and 1st and last character are same from a given list of strings
 my_other_list = ['abc','xyz','aba','1221']
