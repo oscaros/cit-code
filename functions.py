@@ -33,7 +33,7 @@ print(multiply(2))
 #     print(user, pass)
 # login(user="admin", pass="abc123")
 
-#abitrary ffunctions- uknown no of args
+#abitrary functions- uknown no of args
 def summation(*args):
     print(sum(args))
 summation(1,2,3,4,5)

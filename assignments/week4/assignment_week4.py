@@ -1,6 +1,6 @@
 # #1 Create a 2-D array and slice out the second number in the second column
-# My2DArray = [["o", "s", "c"], ["a", "r", "o"]]
-# print(My2DArray[1][1:2])
+My2DArray = [["o", "s", "c"], ["a", "r", "o"]]
+print(My2DArray[1:0][1])
 
 
 # #2 Write a python program to sort array element in the ascending/descending order
@@ -174,18 +174,18 @@
 
 
 #11 Write a function to compute 5/0 and use try/except to catch the exceptions.
-def divide(x,y):
-    try:
-        divide = x/y
-        return divide
-    except ZeroDivisionError:
-        return "bad calculation"
+# def divide(x,y):
+#     try:
+#         divide = x/y
+#         return divide
+#     except ZeroDivisionError:
+#         return "bad calculation"
 
-print(divide(5,0))
-
-
-# Create a nesting list that prints out the color and the car brand.
+# print(divide(5,0))
 
 
+#12 Create a nesting list that prints out the color and the car brand.
 
-# Bonus Question: Algorithm challenge: Create your own sorting algorithm.
+
+
+#13 Bonus Question: Algorithm challenge: Create your own sorting algorithm.
