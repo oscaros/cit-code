@@ -42,8 +42,11 @@ class Animal:
                 self.__food.remove(food)
         return self.__food
 
+    def talk(self):
+        return 0
+
 class Dog(Animal):
-    def __init__(self, name:str, age: str, food: str, sound: str):
+    def __init__(self, name:str, age: str, food: list, sound: str):
         
         super().__init__(name,age,food)
         self.__sound = sound
@@ -62,18 +65,19 @@ class Cat(Animal):
     def talk(self):
         return f"I {self.__sound}"
 
-
-newAnimal = Animal("Dog",10, [])
+#Dog class
 newDog = Dog("Crypto", 10, "Bones", "bark")
 newDog.add_food("Bones")
 newDog.set_age(10)
 newDog.set_name("Crypto")
+print(newDog.talk())
 
-print(newDog)
-
-
-    
-
+#cat class
+newCat = Cat("Kitty", 10, "Bones", "Moeww")
+newCat.add_food("Milk")
+newCat.set_age(10)
+newCat.set_name("Kitty")
+print(newCat.talk())
 
 
 
@@ -83,6 +87,16 @@ How many days will it take the snail to get out of a well with the given depth?.
 Sample Input: 31
 Sample Output: 6
 '''
+def NoOfDaysForSnail(depth):
+    initial_feet = 7
+    unscussfull_feet = 2
+    final_successful_feet = initial_feet - unscussfull_feet
+
+    no_of_days = depth // final_successful_feet
+    print(no_of_days)
+
+NoOfDaysForSnail(31)
+
 
 '''
 3. Write a function that takes a list of numbers and returns the largest number in the list.
@@ -91,7 +105,7 @@ def LargestNo():
     #first sort the list
     MyList = [7,5,10,8,3]
 
-    #seort in asc order using bubble sort
+    #sort in asc order using bubble sort
     i = 0
     while i<len(MyList):
         j = 0
@@ -100,18 +114,10 @@ def LargestNo():
                 MyList[j], MyList[j+1] = MyList[j+1], MyList[j]
             j += 1
         i += 1
-    return MyList
 
+    print("Largest number in {} is : {}".format(MyList, MyList[-1]))
 
-def printLargest():
-    mynewList = LargestNo()
-    print("Largest number in {} is : {}".format(mynewList, mynewList[-1]))
-
-printLargest()
-
-
-
-
+LargestNo()
 
 
 
@@ -125,6 +131,18 @@ Then, the output should be:
 `LOWER CASE 9`
 '''
 
+def counter(word: str):
+    upper = 0
+    lower = 0
+
+    for i in word:
+        if i.isupper():
+            upper += 1 
+        else:
+            lower += 1
+    print("UPPER CASE is {} \nLOWER CASE is {}". format(upper, lower))
+    
+counter("Hello World")
 
 
 
@@ -144,9 +162,23 @@ the game. The game should be played as follows:
 '''
 
 
+
+
 '''
 6. Write a Python program that lists out all the default as well as custom properties of the class.
 '''
+print("6. Write a Python program that lists out all the default as well as custom properties of the class.")
+class Animal2:
+    def __init__(self, name: str, sound: str): 
+        self.name = name
+        self.sound = sound
+
+AnimalInst = Animal2("Dog", "Barks")
+print(dir(AnimalInst))
+
+    
+
+
 
 '''
 7. Write a Program in Python to implement a Stack Data Structure using Class and Objects, with push, pop, 
@@ -203,7 +235,7 @@ def sizeOfqueue(queue):
 
 #check if queue is full
 def enqueue(data, queue, max_size):
-    if sizeOfqueue() > max_size:
+    if sizeOfqueue(queue) > max_size:
         print(f"Queue is already full thus {data} wont be added to the Queue. Queue is currently {queue}")
     else:
         queue.append(data)
@@ -211,7 +243,7 @@ def enqueue(data, queue, max_size):
 
 #check if queue is empty
 def dequeue(queue):
-    if not sizeOfqueue() < 1:
+    if not sizeOfqueue(queue) < 1:
         print(f"{queue.pop(0)} has been removed from the Queue. Queue is currently {queue}")
     else: 
         print("Queue is already empty")
@@ -227,12 +259,12 @@ def main():
 
     #at this level since the maxsize set is 5, overflow occurs with error that queue is full, 90 & 100 wont be added
 
-    enqueue(90)
-    enqueue(100)
+    enqueue(90, queue, max_size)
+    enqueue(100, queue, max_size)
 
     #remove some elements from the queue
-    dequeue()
-    dequeue()
+    dequeue(queue)
+    dequeue(queue)
 
 if __name__ == "__main__":
     main()
