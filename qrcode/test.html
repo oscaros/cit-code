@@ -1,0 +1,27 @@
+<script type="text/javascript">
+//simple script to depict what happens during the registration process
+
+//obtain user input/ detail
+var username = prompt("Enter username \n");
+var email = prompt("Enter email \n");
+var password = prompt("Enter password \n");
+var phone = prompt("Enter phone \n");
+
+// validate user input
+if(username === ""){
+  alert("Ensure that username field is not empty");
+}else if(email === ""){
+  alert("Ensure that email field is not empty");
+}else if(password === ""){
+  alert("Ensure that password field is not empty");
+}else if(phone === ""){
+  alert("Ensure that phone number field is not empty");
+}else{
+  submitRegistration(username, email, password, phone);
+}
+
+//submit / process user registration
+function submitRegistration(username, email, password, phone){
+  alert("User account for "+ username + " has been created successfully");
+}
+</script>
