@@ -28,15 +28,50 @@
     </script>
     <link href="https://uploads-ssl.webflow.com/6330f9dbe239121517e39573/6330f9dce239128a59e3957e_New%20icon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="https://uploads-ssl.webflow.com/6330f9dbe239121517e39573/6330f9dce239125d78e39594_metric-webclip.png" rel="apple-touch-icon" />
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
+    <style>
+        /* (B) STAR RATING WRAPPER */
+        .starwrap { display: flex; padding: 5px; margin-right: 10px;}
+
+        /* (C) STAR ICON */
+        .star {
+        font-size: 24px; color: #FF0000;        
+        font-style: normal; font-weight: normal; font-variant: normal;
+        text-transform: none; 
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+         
+        
+        }
+        .star::before { content: "\f005"; }
+        .star.on { color: #ffe000; }
+
+        #textarea-container {
+            position: relative;
+        }
+        #textarea-container textarea {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        #textarea-container a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 5px;
+            margin-top: 3px;
+        }
+    </style>
+  
   </head>
   <body>
     <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation w-nav">
       <div class="w-container">
-        <a href="#" class="brand-link w-nav-brand">
+        <a href="{% url 'home_page' %}" class="brand-link w-nav-brand">
           <div class="logo-text">Mazda Language Translator</div>
         </a>
         <nav role="navigation" class="nav-menu w-nav-menu">
-          <a href="#features" class="nav-link w-nav-link">How it works</a>
+          <a href="{% url 'how_it_works' %}" class="nav-link w-nav-link">How it works</a> 
         </nav>
         <div class="nav-link menu w-nav-button">
           <div class="w-icon-nav-menu"></div>
@@ -68,7 +103,7 @@
         <div class="w-row">
           <div class="w-col w-col-6">
             <h1 class="main-heading">Translate up to 60 international languages</h1>
-            <a href="#" class="button hollow">Learn More</a>
+            {% comment %} <a href="#" class="button hollow">Learn More</a> {% endcomment %}
           </div>
          
 
@@ -83,15 +118,19 @@
               <div class="w-col w-col-6">
                 <div>
                   <select id="field-3" name="field-3" id="field-3" data-name="Field 3" required="" class="w-select">
-                    <option value="">Select language to translate...</option>
+                    <option value="">Select language to translate from...</option>
                     {% for lang in languages %}  
                         <option value="{{lang.iso_code}}">{{lang.name}}</option>
                     {% endfor %} 
                     
                   </select>
                 </div>
-                <textarea placeholder="Example Text" maxlength="5000" id="field-2" name="field-2" data-name="field" class="textarea-2 w-input"></textarea>
+                <div id="textarea-container">
+                <textarea placeholder="Example Text to translate" maxlength="5000" id="field-2" name="field-2" data-name="field" class="textarea-2 w-input"></textarea>
+                {% comment %} <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/25/25682.png" height="16px" width="16px"/></a> {% endcomment %}
+                </div>
               </div>
+
               <div class="column w-col w-col-1">
                 <a href="#" class="button-2 w-button" id="switchlang"></a>
                 <a href="#"></a>
@@ -106,6 +145,7 @@
                   </select>
                 </div>
                 <textarea placeholder="Example Text" maxlength="5000" id="field" name="field" data-name="field" class="textarea w-input"></textarea>
+                <div class="rate" id="rating">Rate this translation &nbsp; &nbsp;</div>
               </div>
             </div>
           </form>
@@ -135,28 +175,28 @@
         <h2>Key app features</h2>
         <div class="section-subtitle">Our app has all the features to make your translation experience memorable</div>
         <div class="small-features-row w-row">
-          <div class="w-col w-col-3">
+          <div class="w-col w-col-4">
             <div class="feature">
               <img src="https://uploads-ssl.webflow.com/6330f9dbe239121517e39573/63319f33901c1d578fabd062_text-detection.png" height="30" alt="" class="feature-icon" />
               <h3>Auto detect language</h3>
-              <p class="paragraph">Our translator will automatically detect the language of the text that you type in the text </p>
+              <p class="paragraph">Our translator will automatically detect the language of the text that you type in the text area </p>
             </div>
           </div>
-          <div class="w-col w-col-3">
+          <div class="w-col w-col-4">
             <div class="feature">
               <img src="https://uploads-ssl.webflow.com/6330f9dbe239121517e39573/63310416e5a254656c17f39c_swap.png" height="30" alt="" class="feature-icon" />
               <h3>Swap languages</h3>
               <p>You can easily swap between the language you are translating from to the language you are translating to</p>
             </div>
           </div>
-          <div class="w-col w-col-3">
+          {% comment %} <div class="w-col w-col-3">
             <div class="feature">
               <img src="https://uploads-ssl.webflow.com/6330f9dbe239121517e39573/63319f800474c855b088ca2e_share.png" height="30" alt="" class="feature-icon" />
               <h3>Share Translation</h3>
               <p>After translating text, you can share it out to the world and let your friends know about our translator</p>
             </div>
-          </div>
-          <div class="w-col w-col-3">
+          </div> {% endcomment %}
+          <div class="w-col w-col-4">
             <div class="feature">
               <img src="https://uploads-ssl.webflow.com/6330f9dbe239121517e39573/63319fc7ddae1bb52f01f3bd_star.png" height="30" alt="" class="feature-icon" />
               <h3>Rate translation</h3>
@@ -178,17 +218,180 @@
 		<![endif]-->
     <script type="text/javascript">
         $(document).ready(function() {
+            $( '.rate' ).hide();
+            translate();
+            
             $("#switchlang").on('click', function (ev) {
                 switchLanguages();
             });
         });
 
+        //  target : target html element
+        //  max : number of stars, default 5
+        //  now : number of stars now, default 0
+        //  disabled : cannot change number of stars/click, default false
+        //  click : run this function when user click on star
+        function starry (instance) {
+        // (A) SET DEFAULTS
+        if (instance.max === undefined) { instance.max = 5; }
+        if (instance.now === undefined) { instance.now = 0; }
+        if (instance.now > instance.max) { instance.now = instance.max; }
+        if (instance.disabled === undefined) { instance.disabled = false; }
+
+        // (B) GENERATE STARS
+        instance.target.classList.add("starwrap");
+        for (let i=1; i<=instance.max; i++) {
+            // (B1) CREATE HTML STAR
+            let s = document.createElement("div");
+            s.className = "star";
+            instance.target.appendChild(s);
+
+            // (B2) HIGHLIGHT STAR
+            if (i <= instance.now) { s.classList.add("on"); }
+
+            if (!instance.disabled) {
+            // (B3) ON MOUSE OVER
+            s.onmouseover = () => {
+                let all = instance.target.getElementsByClassName("star");
+                for (let j=0; j<all.length; j++) {
+                if (j<i) { all[j].classList.add("on"); }
+                else { all[j].classList.remove("on"); }
+                }
+            };
+
+            // (B4) ON CLICK
+            if (instance.click) { s.onclick = () => { instance.click(i); }; }
+            }
+        }
+
+        // (C) GET NUMBER OF SELECTED STARS
+        instance.target.getstars = () => {
+            return instance.target.querySelectorAll(".on").length;
+        };
+        }
+
     function switchLanguages () {
+        //this will swap the values in the select boxes
         var co=$("#field-3").val();
-        console.log(co)
-        $("#field-3").val($("#field-4").val());
-        $("#field-4").val(co);
+        //console.log("translate from language" + co)
+        $("#field-3").val($("#field-4").val()).change();
+        $("#field-4").val(co).change();
+
+        //$("div.id_100 select").val("val2").change();   fr // en   en // fr
+
+        //this will swap the values in thye text areas
+        var co1=$("#field-2").val();
+        //console.log("translate from language text" + co1)
+        $("#field-2").val($("#field").val()).change();
+        $("#field").val(co1).change();
+  
+        //$("#field").val("");
+        translate();
     }
     </script>
+
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> {% endcomment %}
+    <script type="text/javascript">
+        function translate() {
+            
+            $('#field-2').keydown(function(){                                              
+
+            //pick the data from our page forms
+            var TextToTranslate = $('#field-2').val();
+            var LanguageToTransFrom = $('#field-3').val();
+            var LanguageToTransTo = $('#field-4').val();
+
+
+            //if LanguageToTransFrom is not empty then directly translate else autodetect
+            if (LanguageToTransTo != ""){
+                if (LanguageToTransFrom != ""){
+                    $.ajax(
+                        {
+                            type:"GET",
+                            url: "/translateText",
+                            data:{
+                                    TextToTranslate: TextToTranslate,
+                                    LanguageToTransFrom: LanguageToTransFrom,
+                                    LanguageToTransTo: LanguageToTransTo
+
+                            },
+                            success: function( data ) 
+                            {
+                                //$( '#like'+ catid ).remove();                               
+                                $( '#field' ).val(data);
+                                console.log(data);
+                                $( '.rate' ).show();
+                            }
+                        })
+                }else{
+                    $.ajax(
+                        {
+                            type:"GET",
+                            url: "/autoDetectText",
+                            data:{
+                                    TextToTranslate: TextToTranslate,
+                                    LanguageToTransTo: LanguageToTransTo
+
+                            },
+                            success: function( data) 
+                            {
+                                //$( '#like'+ catid ).remove();
+                                var mystring = data;
+                                var mysubstring = mystring.substring(14, 16);  //fr, en
+
+                                $("#field-3").val(mysubstring);
+                                $( '#field' ).val(data);
+
+                            }
+                        })
+
+                }
+
+            }else{
+                alert("Language to translate to cannot be empty");
+            }
+
+
+        
+        });
+     }
+</script>
+
+<script>
+    starry({
+    // (C1) REQUIRED
+        target: document.getElementById("rating"),
+        // (C2) OPTIONAL
+        max: 5,
+        now: 3,
+    // disabled: true,
+        click : (stars) => { 
+            //alert(stars); 
+            //send rating to database
+              saveRating(stars)
+            
+            }
+    });
+
+    function saveRating(rating){
+        $.ajax(
+            {
+                type:"GET",
+                url: "/SaveRating",
+                data:{
+                        rating: rating,
+
+                },
+                success: function(data) 
+                {
+                   alert("rated")
+                }
+            })
+    }
+
+    // (D) TO GET NUMBER OF STARS PROGRAMMATICALLY
+        var stars = document.getElementById("rating").getstars();
+        console.log(stars);
+</script>
   </body>
 </html>

@@ -161,6 +161,26 @@ the game. The game should be played as follows:
     - If a player rolls a 6, they get an extra roll. If they roll a 6 again, they get another extra roll. If they roll a 6 a third time, they get an extra roll, but their turn ends.
 '''
 
+class DiceGame:
+    def __init__(self, players: list):
+        self.players = players
+        
+    def play(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
+
+class Player1:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+class Player2:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+
+
 
 
 
