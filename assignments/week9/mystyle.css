@@ -1,0 +1,20 @@
+    
+    body {
+        background-color: powderblue;
+    }
+    #myheading{
+        color: rgb(45, 131, 206);
+        font-size: large;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+    .myparagraph{
+        color: rgb(0, 0, 0);
+    }
+
+    .product_outer_div{
+        padding-bottom: 2%;
+    }
+
+
+    
