@@ -117,7 +117,11 @@ titleContainer = bs.find("table", class_="itemlist").find_all("tr", class_="athi
 for items in titleContainer:
     title = items.find_all("td", class_="title")[1].find("span", class_="titleline").find("a").text
     link = items.find_all("td", class_="title")[1].find("span", class_="titleline").find("a")["href"]
-    points = bs.find("table", class_="itemlist").find("tr").find("td", class_="subtext")
+    points = items.find("table", class_="itemlist").find_all("td", class_="")
+
+    comments
+    x ="".join(comments.split())
+
 
     print(points)
 # link = 

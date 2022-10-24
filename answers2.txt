@@ -1,3 +1,22 @@
-Answers to week8 quiz questions 
-Qn. 1 : Answer is d 
-Qn. 2 : Answer is c 
+Android Studio -> https://developer.android.com/studio?gclid=Cj0KCQjwnP-ZBhDiARIsAH3FSRcyCwVl_96PPPB0TpQ4Ot0S8dNvzKHmUY0PUDPcZp_TWeILVFdLY8oaAjo1EALw_wcB&gclsrc=aw.ds#downloads
+Apache NetBeans IDE 12.0 -> https://dlcdn.apache.org/netbeans/netbeans-installers/15/Apache-NetBeans-15-bin-windows-x64.exe
+Apache Tomcat 8.5 -> https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.0/bin/apache-tomcat-10.1.0.exe
+ArcGIS 10.5       follow the guide on -> https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm
+Composer Dependency Manager -> https://getcomposer.org/Composer-Setup.exe
+DB Browser for SQLite -> https://download.sqlitebrowser.org/DB.Browser.for.SQLite-3.12.2-win64.msi
+Everything 1.4 -> https://filehippo.com/download_everything/
+Git -> https://git-scm.com/download/win
+Java 8 - 11 -> https://javadl.oracle.com/webapps/download/AutoDL?BundleId=246806_424b9da4b48848379167015dcc250d8d
+Teams (needs updating) -> https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion
+Microsoft visual studio Code -> https://code.visualstudio.com/docs/?dv=win64
+Microsoft Visual Studio  -> https://visualstudio.microsoft.com/vs/community/
+Notepad++ -> https://notepad-plus-plus.org/repository/7.x/7.0/npp.7.Installer.x64.exe
+Node js  -> https://nodejs.org/dist/v16.17.1/node-v16.17.1-x64.msi
+Postman Client  -> https://dl.pstmn.io/download/latest/win64
+Pycharm Community Edition 2020   2022 ver-> https://download.jetbrains.com/python/pycharm-community-2022.2.2.exe?_ga=2.200657902.1188020294.1665164150-1171218629.1665164150&_gl=1*1l6uvx6*_ga*MTE3MTIxODYyOS4xNjY1MTY0MTUw*_ga_9J976DJZ68*MTY2NTE2NDE1MC4xLjEuMTY2NTE2NDE2My4wLjAuMA..
+Python 2.7 - 3.8 -> https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe
+Teamviewer    ->https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe?utm_source=google&utm_medium=cpc&utm_campaign=africa%7Cb%7Cpr%7C22%7Caug%7Ctv-core-download-sn%7Cnew%7Ct0%7C0&utm_content=Free&utm_term=install%20teamviewer%20free&gclid=Cj0KCQjwnP-ZBhDiARIsAH3FSRf9Dtrgj4eOTr9x4AYZ231ecv9EIdmx4eJu_fzLQS3I9YeYyp3N144aAn1SEALw_wcB
+Anydesk  -> https://anydesk.com/en/downloads/thank-you?dv=win_exe
+Xampp  -> https://downloadsapachefriends.global.ssl.fastly.net/7.4.30/xampp-windows-x64-7.4.30-1-VC15-installer.exe?from_af=true
+Zoom  ->https://zoom.us/client/5.12.0.8964/ZoomInstallerFull.exe?archType=x64
+Pip  follow guide -> https://pip.pypa.io/en/stable/installation/
